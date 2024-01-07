@@ -3,7 +3,7 @@ import { SearchComponent } from "./components/Search/search.component"
 
 function App() {
   return (
-    <SearchComponent />
+    <NavComponent />
   )
 }
 
