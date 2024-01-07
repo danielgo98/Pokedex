@@ -1,7 +1,9 @@
+import { NavComponent } from "./components/Nav/nav.component"
+import { SearchComponent } from "./components/Search/search.component"
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">Pokedex</h1>
+    <SearchComponent />
   )
 }
 
