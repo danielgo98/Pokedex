@@ -1,4 +1,4 @@
-export function getGeneration({ generacion }) {
+export function getGeneration(generacion) {
   let url;
   switch (generacion) {
     case 1:

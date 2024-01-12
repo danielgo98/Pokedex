@@ -1,14 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import { LiComponent } from "./li.component";
+import { SearchComponent } from "../Search/search.component";
 
-export function NavComponent() {
+export function NavComponent({setGen}) {
 
     const genList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    const navigate = useNavigate();
-
     const handlePath = (gen) => {
-        navigate(`/gen${gen}`, { replace: true })
+        setGen(gen);
     }
 
     return (
@@ -18,14 +16,17 @@ export function NavComponent() {
                 <ul className="flex flex-wrap py-10 px-10 w-[750px] justify-center gap-5 ">
                     {
                         genList.map(generation => {
-                            return <LiComponent key={generation} generation={generation} path={handlePath(generation)} />
+                            return <LiComponent key={generation} generation={generation} path={() => handlePath(generation)} />
                         })
                     }
                 </ul>
             </nav>
             <header className="flex justify-center">
-                <h1 className="text-white text-6xl font-bold font">Generacion</h1>
+                <h1 className="text-white text-6xl font-bold font">Pokedex</h1>
             </header>
+            <section>
+                <SearchComponent/>
+            </section>
         </>
     )
 

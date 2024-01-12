@@ -1,10 +1,11 @@
-import { NavComponent } from "./components/Nav/nav.component"
-import { SearchComponent } from "./components/Search/search.component"
+import responsePokemon from './mocks/pokemonList.json'
+import { Pokedex } from './pages/Pokedex';
 
 function App() {
+  
   return (
-    <NavComponent />
-  )
+    <Pokedex/>
+  );
 }
 
-export default App
+export default App;
