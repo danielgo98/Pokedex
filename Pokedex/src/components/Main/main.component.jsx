@@ -1,7 +1,9 @@
 import { PokemonComponent } from "./pokemon.component";
 
-export function MainComponent ({pokemonList}) {
+export function MainComponent({ pokemonList}) {
     return (
-        <PokemonComponent pokemonList={pokemonList}/>
+        <>
+            <PokemonComponent pokemonList={pokemonList} />
+        </>
     )
 }

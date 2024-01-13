@@ -12,7 +12,7 @@ export function NavComponent({setGen}) {
     return (
         <>
             <nav className="py-3 px-3 mx-auto flex justify-center items-center flex-row gap-6">
-                <img src="../../../public/pokeball.png" alt="pokeball" className="w-24" />
+                <img src="/pokeball.png" alt="pokeball" className="w-24" />
                 <ul className="flex flex-wrap py-10 px-10 w-[750px] justify-center gap-5 ">
                     {
                         genList.map(generation => {
