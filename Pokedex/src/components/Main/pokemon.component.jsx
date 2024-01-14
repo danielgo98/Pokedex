@@ -35,7 +35,7 @@ function ListOfPokemon({ pokemonList }) {
                         {
                             pokemonList?.map(pokemon => (
                                 <li key={pokemon.name}>
-                                    <PokemonDetails url={pokemon.url} />
+                                    <PokemonDetails url={pokemon.url}/>
                                 </li>
                             ))
                         }
@@ -56,13 +56,17 @@ function NoPokemonList() {
     )
 }
 
-export function PokemonComponent({ pokemonList }) {
+export function PokemonComponent({ pokemonList, showCard }) {
     const hasContent = pokemonList == null;
+    const display = showCard ? 'block' : 'none';
+
     return (
         <>
-            {
-                !hasContent && pokemonList.length > 0 > 0 ? <ListOfPokemon pokemonList={pokemonList} /> : <NoPokemonList />
-            }
+            <div style={{ display: display }}>
+                {
+                    !hasContent && pokemonList.length > 0 > 0 ? <ListOfPokemon pokemonList={pokemonList} /> : <NoPokemonList />
+                }
+            </div>
         </>
     )
 }

@@ -20,12 +20,10 @@ export function Pokedex() {
         fetchResults();
     }, [gen])
 
-    // const finalGenerationResults = searchPokemonResults(finalGeneration);
-
     return (
         <>
             <NavComponent setGen={setGen}/>
-            <MainComponent pokemonList={results}/>
+            <MainComponent pokemonList={results} />
         </>
 
     )
