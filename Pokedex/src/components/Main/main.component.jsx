@@ -23,8 +23,7 @@ export function MainComponent({ pokemonList }) {
         event.preventDefault();
 
         try {
-
-            const data = await searchPokemonData(search);
+            const data = await searchPokemonData(search.toLowerCase());
             setPokemonData(data);
             setShowCard(true);
 
